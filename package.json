@@ -1,11 +1,10 @@
 {
-  "name": "task-manager",
+  "name": "yes",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "./node_modules/.bin/env-cmd -f ./config/dev.env nodemon src/index.js"
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +21,15 @@
     "nodemailer": "^6.7.2",
     "sharp": "^0.29.3",
     "validator": "^13.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagendraatonco/task-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nagendraatonco/task-manager/issues"
+  },
+  "homepage": "https://github.com/nagendraatonco/task-manager#readme",
+  "description": ""
 }
