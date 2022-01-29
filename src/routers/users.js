@@ -12,11 +12,15 @@ router.get('/users/me', auth, async (req, res) => {
 
 router.post('/users/login', async (req, res) => {
     try {
-        const user = await User.findByCredentials(req.body.email, req.body.password)
+        console.log(req.body);
+        const test = await User.findOne({email: req.body.email});
+        console.log(test);
+        const user = await User.findByCredentials(req.body.email, req.body.password);
         console.log("login")
         const token = await user.generateAuthToken()
         res.send({user, token })
     } catch(e){
+        console.log(e);
         res.status(400).send()
     }
 })
